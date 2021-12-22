@@ -1,2 +1,5 @@
 flume.token
-
+token
+api*
+logfile
+secret.mk
