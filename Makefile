@@ -1,12 +1,14 @@
-include secret.mk
+# keep user information here
+include $(HOME)/flumecli/secret.mk
+
 TOKEN=token
 LOGFILE=./logfile
 
 log:
-	@cd /home/tskirvin/flumecli && ./flumecli.py --query --tokenfile $(TOKEN) --logfile $(LOGFILE)
+	@cd $(HOME)/flumecli && ./flumecli.py --query --tokenfile $(TOKEN) --logfile $(LOGFILE)
 
 test:
-	@cd /home/tskirvin/flumecli && ./flumecli.py --query --tokenfile $(TOKEN)
+	@cd $(HOME)/flumecli && ./flumecli.py --query --tokenfile $(TOKEN)
 
 auth:
 	@./flumecli.py --auth --verbose \
