@@ -11,7 +11,7 @@ test:
 	@cd $(HOME)/flumecli && ./flumecli.py --query --tokenfile $(TOKEN)
 
 auth:
-	@./flumecli.py --auth --verbose \
+	@cd $(HOME)/flumecli && ./flumecli.py --auth \
 		--clientid $(USERID) \
 		--clientsecret $(SECRET) \
 		--username $(USERNAME) \
